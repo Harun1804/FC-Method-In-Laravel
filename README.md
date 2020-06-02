@@ -1,17 +1,31 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+## Gunakan Perintah Berikut Agar Aplikasi Berjalan Dengan Semestinya : 
+## Instal composer terlebih dahulu
+[Download disini](https://getcomposer.org/download/)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+### Instal packagenya pada folder project terlebih dahulu
+```
+composer install
+```
 
-# Testing App
+### Copy isi file .env.example
+```
+cp .env.example .env
+```
 
-Import database yang ada difolder database
+### Generate Key Baru
+```
+php artisan key:generate
+```
 
-Kemudian jalan laravelnya dengan
-`
+Pada file .env yang telah dibuat, ganti DB_DATABASE dengan ***db_penyakit***
+dan database tersebut harus ada pada web server kalian (phpmyadmin)
+
+### Lakukan Import Database
+Import db_penyakit dari folder database
+
+### Jalankan aplikasi
+```
 php artisan serve
-`
+```
+
